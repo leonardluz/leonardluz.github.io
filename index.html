@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Rund Chiemsee Bike Route</title>
+
+   <!-- link to leaflet stylesheet -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+   <!-- link to custom stylesheet -->
+   <link rel="stylesheet" href="styles/style.css"/>
+
+   <!-- link to elev profile stylesheet -->
+   <link rel="stylesheet" href="styles/leaflet.elevation-0.0.4-d3v4.css"/>
+
+   <!--link to home button plugin stylesheet-->
+   <!-- <link rel="stylesheet" href="styles/font-awesome.min.css" /> -->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+   <link rel="stylesheet" href="styles/leaflet.zoomhome.css" />
+
+   <!-- link to sidebar stylesheet -->
+   <link rel="stylesheet" href="styles/leaflet-sidebar.css">
+
+</head>
+<body>
+   <!-- Chiemsee Biking -->
+   <!-- <h1 id="title">Rund Chiemsee Cycling Route</h1> -->
+
+   <div id="map"></div>
+
+   <div id="sidebar" class="leaflet-sidebar collapsed">
+      <!-- Nav tabs -->
+      <div class="leaflet-sidebar-tabs">
+         <ul role="tablist">
+            <!-- top aligned tabs -->
+            <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+            <!-- <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li> -->
+            <!-- <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li> -->
+         </ul>
+         
+         <ul role="tablist">
+            <!-- bottom aligned tabs -->
+            <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+         </ul>
+      </div>
+         
+      <!-- Tab panes -->
+      <div class="leaflet-sidebar-content">
+         <div class="leaflet-sidebar-pane" id="home">
+            <h1 class="leaflet-sidebar-header">
+               Rund Chiemsee Cycling Route
+               <div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+            </h1>
+            <p>
+               <br><strong>Location:</strong> Prien am Chiemsee, Bavaria, Germany
+               <br><strong>Distance:</strong> 55 km
+               <br><strong>Ascent:</strong> 117 m
+               <br><strong>Descent:</strong> 110 m
+               <br>
+               <br>GPX data by Fritz Rieder
+               <br>Source: <a href="https://bikemap.net">bikemap.net</a>
+               <br>
+               <br><strong>Hover on the Elevation Profile below to explore the route's terrain.</strong>
+            </p>
+         </div>
+      </div>
+   </div>
+
+   <!-- link to leaflet js -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin="">
+   </script>
+
+   <!-- link to places data -->
+   <script src="data/accommodation.js" type="text/javascript"></script>
+
+   <!-- link to viewpoints data -->
+   <script src="data/viewpoint.js" type="text/javascript"></script>
+
+   <!-- link to attractions data -->
+   <script src="data/attraction.js" type="text/javascript"></script>
+
+   <!-- link to D3 API used by elevation -->
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+   
+   <!-- link to elevation API -->
+   <script src="scripts/leaflet.elevation-0.0.4-d3v4.src.js"></script>
+   
+   <!-- link to GPX API used by elevation -->
+   <script src="scripts/gpx.js"></script>
+
+   <!-- link to homebutton API -->
+   <script src="scripts/leaflet.zoomhome.min.js"></script>
+
+   <!-- link to sidebar API -->
+   <script src="scripts/leaflet-sidebar.js"></script>
+
+   <!-- link to bouncing markers API -->
+   <script src="scripts/bouncemarker.js"></script>
+   
+   <!-- link to main js -->
+   <script src="scripts/main.js"></script>
+
+</body>
+</html>
