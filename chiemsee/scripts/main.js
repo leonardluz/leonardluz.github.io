@@ -93,7 +93,7 @@ var map = L.map('map', {
 });
 
 //add custom home button
-var zoomHome = L.Control.zoomHome();
+var zoomHome = L.Control.zoomHome({ position: 'topright' });
 zoomHome.addTo(map);
 
 //add legend
