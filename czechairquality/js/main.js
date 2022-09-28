@@ -157,18 +157,12 @@ getData();
 poly.bringToBack();
 
 //add wind layer from OWM
-const APIkey = 'db52685d83086e2e3a5f251b54da7d78';
-const wind = L.tileLayer('http://maps.openweathermap.org/maps/2.0/weather/WND/{z}/{x}/{y}?appid=' + APIkey, {
-   maxZoom: 19,
-}).addTo(map);
+//const APIkey = 'db52685d83086e2e3a5f251b54da7d78';
+const APIkey = 'cd413bcfb08128ffd8a30f40d5d12d1d';
+var wind = L.OWM.wind({ appId: APIkey });
 
 //add air temperature layer from OWM
-const temp = L.tileLayer('http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?appid=' + APIkey, {
-   maxZoom: 19,
-});
-
-
-
+var temp = L.OWM.temperature({ appId: APIkey });
 
 
 //add legend
