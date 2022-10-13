@@ -77,9 +77,9 @@
       ) {
         const layer = new GeoJSONLayer({
           url: "https://earthquake.usgs.gov/fdsnws/event/1/query",
-          copyright: "USGS - Philippine earthquakes since 1905",
+          copyright: "USGS - Philippine earthquakes since PAGER alert level was established",
           // Use customParameters to set the query parameters
-          // get the all red alert Japan earthquakes since 1905
+          // get the all green alert earthquakes
           // order the results by magnitude
           customParameters: {
             format: "geojson",
@@ -89,7 +89,7 @@
             minmagnitude: 1,
             alertlevel: "green"
           },
-          // only show earthquakes that mentions japan
+          // only show earthquakes that mentions philippines
           definitionExpression: "place LIKE '%Philippines'",
           effect: "bloom(2 1px 0)",
           title: "USGS Earthquakes",
